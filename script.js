@@ -17,8 +17,10 @@ async function timer(){
     setTimeout(() => {
         box.innerHTML= "Terminal is hacking ...";
     }, 13000);
+
 }
 async function termer(){
+    let data= await timer();
     setTimeout(() => {
         box1.innerHTML= "Terminal is hacked";
     }, 16000);
@@ -33,6 +35,7 @@ async function termer(){
     }, 24000);
 }
 async function checker(){
+    let term= await termer();
    setTimeout(() => {
     box2.innerHTML= "Getting the passwords and the credentials";
    }, 28000);
@@ -46,8 +49,8 @@ async function end(){
 
 
 async function main(){
-    let data= await timer();
-    let term= await termer();
+    // let data= await timer();
+   // let term= await termer();
     let check= await checker();
     let ender= await end();
 }
